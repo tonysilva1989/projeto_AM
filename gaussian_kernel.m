@@ -1,6 +1,5 @@
-function K = gaussian_kernel(x,v)
+function K = gaussian_kernel(x,v,sigma)
 
-	sigma = 1;
 	K = exp(-((abs(v-x))^2)/2*sigma);
 	
 end
