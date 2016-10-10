@@ -1,8 +1,8 @@
-function s = distance(x,v,p,sigma,@gaussian_kernel)
+function s = distance(x,v,p)
 
     %recebe o x_j-ésimo atributo
     %calcula a j-esima distancia a partir da equacao 6 do paper
-    %p: tamanho do somatorio
+    %p: tamanho do somatorio (número de variáveis ou atributos)
     %i: i-ésimo objeto (vetor de atributos)
     %k: k-ésimo objeto (vetor de atributos)
     %sigma: necessário para o kernel gaussiano

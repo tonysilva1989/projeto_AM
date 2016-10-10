@@ -1,0 +1,21 @@
+function lambda = lambda(x,v,i,k,v_distance,l,j,P_k,K)
+    %x,v; vetores de entrada x e v
+    %i,k: i-ésimo vetor x e k-ésimo vetor v
+    %distance: vetor que armazena os valores de distância
+    %l,j: posições do vetor de distância que serão utilizadas
+    %P_k: tamanho da k-ésima partição P
+    %@distance: função para calcular a distância
+    %K: limite superior do 2º somatório (centroides v)
+    
+    p=3; %número de atributos (da base de dados?)
+    produto=1; %inicialização do produtório
+
+    for k=1:K
+        for i=1:P_k
+           v_distance(l) = v_distance(l) + distance(x(i,l),v(k,l),p);
+        end
+    end
+    
+    for 
+    
+end
