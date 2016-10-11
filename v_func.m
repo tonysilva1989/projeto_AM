@@ -1,10 +1,10 @@
-function v_kj = v_func(x,v,P,n,j,@gaussian_kernel)
+function v_kj = v_func(v,P,length_P,j)
 
 	%n: tamanho do vetor x de atributos
 	%P(i): x_i-ésimo objeto (vetor de atributos) no vetor de Partições
     %v: é assumido que se está recebendo o kj-ésimo vetor
+    %length_P 
     
-	lenght_P = size(P); %tamanho do vetor de partções escolhido
 	soma = 0;
     soma_denom = 0;
     
