@@ -17,7 +17,7 @@ function [X, N, p, K, particaoClasses, classesPadroes] = ler_dados()
 
     X = convertToDouble(A, N, p);
 
-    X = normalizar5(X, p);
+    X = normalizar(X, p);
 
     labels = ['M', 'F', 'I'];
 
