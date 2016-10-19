@@ -1,0 +1,23 @@
+function out = sigma(x,v,i,k,p)
+    %x,v: vetores de atributos e centroides
+    %i,j: i-ésima e k-ésima posições dos vetores de entrada
+    
+    ind =1;
+    %o tamanho de ind será i*k???
+    for j=1:p
+        
+        for i=1:n
+            for k=1:n
+
+                if (i ~= k)
+                   array(ind) = (abs(x(i,j) - v(k,j)))^2;
+                end
+
+            end
+        end
+        sigma = (quantile(array,0.1))/2.0;
+        
+    end
+    
+    
+end

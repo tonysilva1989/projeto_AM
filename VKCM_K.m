@@ -59,4 +59,6 @@ function out = VKCM_K()
     end
     
     
+    %dados de saída: cluster centroides v_k
+    %                o conjunto de partições P
 end
