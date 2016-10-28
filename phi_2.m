@@ -1,4 +1,4 @@
-function z = phi_2(x,v,i,k,lambda,p)
+function z = phi_2(x,v,i,k,p)
 	%p: número de atributos ou variáveis
 	%lambda está sujeito ao comprimento máximo p
 	%i,k : i-�simos e k-�simos objetos 

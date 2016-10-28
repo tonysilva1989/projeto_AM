@@ -8,6 +8,7 @@ function out = VKCM_K()
     K=3; %defini��o de valores do n�mero de parti��es
     n=4177; %n�mero de objetos presentes na base de dados
     %%%%%%FALTA DEFINIR O VETOR X DE ENTRADAS
+    test = 1; %para poder entrar na primeira iteração do laço principal
     
     %definindo os valores iniciais do vetor de pesos lambda
     lambda = ones([1,p]);
@@ -28,8 +29,7 @@ function out = VKCM_K()
 
         %C�LCULO DOS PESOS DAS VARI�VEIS (Equa��o 16):
 
-        %%se��o incompleta, precisa saber quem � o �ndice i a ser colocado na
-        %%fun��o
+
         for j=1:p
             v_lambda(j) = lambda(P,v,j,K,sigma_array); 
         end
@@ -44,7 +44,7 @@ function out = VKCM_K()
         for i=1:n
 
             for k=1:K
-               val(k) = phi_2(x,v,i,k,lambda,p);
+               val(k) = phi_2(x,v,i,k,p);
             end
                 [dist ind] = min(val); %mostra o indice da menor dist�ncia encontrada
 
