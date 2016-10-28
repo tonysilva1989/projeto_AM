@@ -1,8 +1,7 @@
-function out = lambda(P,v,i,k,v_distance,l,j,P_k,K)
+function out = lambda(P,v,j,K)
 
     %P,v; vetores de entrada x e v (P refer-se aos objetos x que pertencem
     %à k-ésima partição fornecida
-    %i,k: i-ésimo vetor x e k-ésimo vetor v
     %distance: vetor que armazena os valores de distância
     %l,j: posições do vetor de distância que serão utilizadas
     %P_k: tamanho da k-ésima partição P ( os 3 possuem o msm tamanho?)
@@ -17,7 +16,7 @@ function out = lambda(P,v,i,k,v_distance,l,j,P_k,K)
     for l=1:p
         for k=1:K
             for i=1:P_k
-               v_distance(l) = v_distance(l) + distance(P(i,l,k),v(k,l),p);
+               v_distance(l) = v_distance(l) + distance(P(i,l,k),v(k,l),p,ind);
             end
         end
         prod = prod*v_distance(l); %operação de produtório
@@ -28,7 +27,7 @@ function out = lambda(P,v,i,k,v_distance,l,j,P_k,K)
     %calculando o denominador:
     for k=1:K
         for i=1:P_k
-           v_distance(j) = v_distance(j) + distance(P(i,j,k),v(k,j),p);
+           v_distance(j) = v_distance(j) + distance(P(i,j,k),v(k,j),p,ind);
         end
     end
 
