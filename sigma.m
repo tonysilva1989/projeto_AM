@@ -1,5 +1,5 @@
-function out = sigma(x,v,i,k,p)
-    %x,v: vetores de atributos e centroides
+function out = sigma(x,p)
+    %x: vetor de atributos
     %i,j: i-ésima e k-ésima posições dos vetores de entrada
     
     ind =1;
@@ -9,7 +9,7 @@ function out = sigma(x,v,i,k,p)
         for i=1:n
             for k=1:n
                 if (i ~= k)
-                   array(ind) = (abs(x(i,j) - v(k,j)))^2;
+                   array(ind) = (abs(x(i,j) - x(k,j)))^2;
                    ind = ind+1;
                 end                
             end
